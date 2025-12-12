@@ -13,17 +13,14 @@
       align-items: center;
       justify-content: center;
     }
-
     .app {
       background: rgba(255, 255, 255, 0.9);
       padding: 24px 32px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      text-align: center;
       max-width: 420px;
       width: 100%;
     }
-
     .card {
       position: relative;
       width: 260px;
@@ -37,12 +34,10 @@
       background: #fff;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 14px 30px rgba(0,0,0,0.3);
     }
-
     .card img {
       width: 100%;
       height: 100%;
@@ -59,7 +54,7 @@
   </div>
 
   <script>
-    // Käytä samoja nimiä, joilla tallensit kuvat kansioon
+    // HUOM: nimet täsmälleen kuten repossa
     const cards = [
       "card1.png",
       "card2.png",
@@ -70,6 +65,7 @@
     ];
 
     let currentIndex = 0;
+
     const cardElement = document.getElementById("card");
     const cardImage = document.getElementById("cardImage");
 
@@ -77,7 +73,6 @@
       cardImage.src = cards[index];
     }
 
-    
     function nextCard() {
       currentIndex = (currentIndex + 1) % cards.length;
       showCard(currentIndex);
@@ -85,7 +80,7 @@
 
     cardElement.addEventListener("click", nextCard);
 
-    // Näytä ensimmäinen kortti
+    // ensimmäinen kuva näkyviin
     showCard(currentIndex);
   </script>
 </body>
