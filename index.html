@@ -6,33 +6,50 @@
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #ffecd2, #fcb69f);
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* JOULUINEN TAUSTA */
+  background-image:
+    linear-gradient(
+      rgba(20, 60, 20, 0.65),
+      rgba(20, 60, 20, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1608889175119-58c01c9b63f2");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
     }
     .app {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 24px 32px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      max-width: 420px;
-      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 28px 34px;
+  border-radius: 22px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    inset 0 0 0 3px #c62828;
+  max-width: 420px;
+  width: 100%;
     }
     .card {
       position: relative;
       width: 390px;
       height: 540px;
       margin: 0 auto;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 3px solid #e53935;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-      cursor: pointer;
-      background: #fff;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-radius: 20px;
+  overflow: hidden;
+
+  border: 4px solid #c62828;
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.35),
+    inset 0 0 0 2px rgba(255,255,255,0.6);
+
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .card:hover {
       transform: translateY(-4px);
